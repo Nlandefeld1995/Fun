@@ -1,0 +1,22 @@
+{
+  "name": "Simple Adventures Instagram",
+  "version": "1.0.0",
+  "size": {
+    "width": 3,
+    "height": 3
+  },
+  "fullpage": true,
+  "mapping": [
+    {
+      "alias": "insta",
+      "dataSetId": "1806566f-5084-4f4b-94cc-197574db1083",
+      "fields": [
+        {
+          "alias": "url",
+          "columnName": "images_standard_resolution_url"
+        }
+      ]
+    }
+  ],
+  "id": "{}"
+}

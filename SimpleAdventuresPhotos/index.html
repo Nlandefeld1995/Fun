@@ -1,0 +1,55 @@
+<html>
+
+<head></head>
+
+<body>
+    <script src="domo.js"></script>
+    <script>
+        var instaarray = [];
+        domo.get(`/data/v1/insta`, {
+            format: 'array-of-objects'
+        }).then(function(data) {
+            for (i = 0; i < data.length; i++) {
+                instaarray.push(data[i].url);
+            }
+            displaypictures();
+        });
+
+        function displaypictures() {
+            var l = instaarray.length;
+            var v = getRandomInt(0, l);
+            document.body.style.backgroundImage = `url(${instaarray[v]})`;
+
+            setTimeout(function() {
+                displaypictures();
+            }, 2500)
+
+
+        }
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+        }
+
+
+
+        try {
+            post.request()
+        } catch (err) {
+            alert(err);
+        }
+    </script>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #333333;
+            border: 10px solid white;
+        }
+    </style>
+</body>
+
+</html>

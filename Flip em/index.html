@@ -1,0 +1,70 @@
+<html>
+
+<head></head>
+
+<body>
+    <iframe id='iframe1' style="width:-webkit-fill-available;height:-webkit-fill-available"></iframe>
+    <script src="domo.js"></script>
+    <script>
+        var linkarray = [];
+        var durationarray = [];
+        domo.get(`/data/v1/cards`, {
+            format: 'array-of-objects'
+        }).then(function(data) {
+            for (i = 0; i < data.length; i++) {
+                console.log(data);
+                console.log(data[i]);
+                linkarray.push(data[i].iframe);
+                durationarray.push(data[i].duration)
+            }
+            displaypictures();
+        });
+        var v = -1;
+
+        function displaypictures() {
+            v++;
+            if (v >= linkarray.length) {
+                v = 0
+            }
+            var l = linkarray.length;
+            console.log(linkarray[v]);
+            document.getElementById('iframe1').src = linkarray[v];
+            //document.body.style.backgroundImage = `${linkarray[v]}`;
+
+
+
+            setTimeout(function() {
+                console.log(durationarray[v]);
+                displaypictures();
+
+            }, durationarray[v] * 1000)
+
+
+        }
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+        }
+
+
+
+        try {
+            post.request()
+        } catch (err) {
+            alert(err);
+        }
+    </script>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #333333;
+            border: 10px solid white;
+        }
+    </style>
+</body>
+
+</html>

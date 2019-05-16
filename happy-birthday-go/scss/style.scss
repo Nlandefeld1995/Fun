@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+* {
+  box-sizing: border-box;
+}
+
+.birthday-container{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #ededed;
+}
+
+.birthday-container__text {
+  font-family: 'Pacifico', cursive;
+  letter-spacing: .1rem;
+  color: #D0378C;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  font-size: 18vmin;
+  padding: 2vmin;
+  margin: 0;
+  text-align: center;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  opacity: 0;
+  animation: birthday-container__text 1s 2s forwards;
+}
+
+@keyframes birthday-container__text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.birthday-container__graphic {
+  width: 100vmin;
+  height: 100vmin;
+  background: #ededed;
+  position: relative;
+}
+
+.cake {
+  width: 50%;
+  height: 45%;
+  position: absolute;
+  transform: translate(-50%,0%);
+  border: 2vmin solid black;
+  bottom: 3vmin;
+  left: 50%;
+  border-radius: 10vmin 10vmin 0 0;
+  background: linear-gradient(to right, rgba(254,229,203,1) 0%,rgba(254,229,203,1) 8%,rgba(250,204,147,1) 9%,rgba(250,204,147,1) 100%);
+  
+  &__bottom {
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    border-top: 1.5vmin solid black;
+    background: linear-gradient(to bottom, rgba(233,153,196,1) 0%, rgba(233,153,196,1) 20%, rgba(208,55,140,1) 25%, rgba(208,55,140,1) 100%);
+    
+    &::before {
+      content: ' ';
+      position: absolute;
+      width: 9%;
+      height: 100%;
+      left: 0;
+      background: #FEE5CB
+    }
+  }
+  
+  &__top {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: #32B9EC;
+    border-radius: 10vmin 10vmin 0 0;
+    border-bottom: 2vmin solid black;
+    
+    &::before {
+      content: " ";
+      width: 6%;
+    //  height: 140%;
+      height: 0%;
+      position: absolute;
+      background: #32B9EC;
+      border-radius: 0 0 10vmin 10vmin;
+      border: 2vmin solid black;
+      border-top: none;
+      top: 100%;
+      left: 20%;
+      animation: cake__top-left 1.5s 1s forwards;
+    }
+    
+    &::after {
+      @extend .cake__top::before;
+      left: 37%;
+     // height: 230%;
+      height: 0%;
+      animation: cake__top-right 2s 1s forwards;
+    }
+  }
+  
+  @keyframes cake__top-left {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 140%;
+    }
+  }
+  
+  @keyframes cake__top-right {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 230%;
+    }
+  }
+  
+  &__cherry {
+    position: absolute;
+    width: 17%;
+    height: 17%;
+    background: #D0378C;
+    border-radius: 50%;
+    border: 1.5vmin solid black;
+    top: -18%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    animation: cake__cherry 1s forwards;
+    
+    &::before {
+      content: ' ';
+      width: 80%;
+      height: 60%;
+      position: absolute;
+      border-right: 1.5vmin solid black;
+      border-bottom: 1.5vmin solid black;
+      border-bottom-right-radius: 150% ;
+      bottom: 100%;
+      left: 90%;
+      transform: rotate(-20deg);
+    }
+  }
+  
+  @keyframes cake__cherry {
+    0% {
+      transform: translate(-50%,-5000%);
+    }
+    100% {
+      transform: translate(-50%,0%);
+    }
+  }
+}

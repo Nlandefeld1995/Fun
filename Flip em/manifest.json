@@ -1,0 +1,23 @@
+{
+    "name": "Flip Em",
+    "version": "1.0.0",
+    "size": {
+        "width": 3,
+        "height": 3
+    },
+    "fullpage": true,
+    "mapping": [{
+        "alias": "cards",
+        "dataSetId": "c71680a5-ce9e-47be-95e3-a3aabbc6d476",
+        "fields": [{
+                "alias": "iframe",
+                "columnName": "iframe"
+            },
+            {
+                "alias": "duration",
+                "columnName": "duration"
+            }
+        ]
+    }],
+    "id": "{}"
+}

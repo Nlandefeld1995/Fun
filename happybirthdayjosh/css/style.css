@@ -1,0 +1,325 @@
+html, body {
+  background-color: #fcfade;
+  font-size: 62.5%;
+  line-height: 3rem;
+  margin: 0;
+}
+
+.v-t {
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+}
+.v-t .v-tc {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+h1 {
+  font-size: 18px;
+  font-size: 2.8em;
+  font-size: 3.5vw;
+  color: rgba(0, 0, 0, 0.5);
+  top: 14%;
+}
+
+h2 {
+  bottom: 1vh;
+  font-size: 10px;
+  font-size: 1.0rem;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+span {
+  font-size: 10.6vw;
+  line-height: 1.0em;
+  z-index: 100;
+  text-shadow: 0.04em 0.04em 0 #fcfade;
+  display: block;
+}
+span, span:after {
+  font-weight: 600;
+  color: #e17171;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 0.16em;
+}
+span.one:after {
+  content: "Whale you";
+  color: rgba(0, 0, 0, 0.25);
+  text-shadow: none;
+  position: absolute;
+  left: .08em;
+  top: .08em;
+  z-index: -1;
+  -webkit-mask-image: url(http://jonambas.com/valentines/public/images/mask.png);
+  mask-image: url(http://jonambas.com/valentines/public/images/mask.png);
+}
+span.two:after {
+  content: "Be Mine?";
+  color: rgba(0, 0, 0, 0.25);
+  text-shadow: none;
+  position: absolute;
+  left: .08em;
+  top: .08em;
+  z-index: -1;
+  -webkit-mask-image: url(http://jonambas.com/valentines/public/images/mask.png);
+  mask-image: url(http://jonambas.com/valentines/public/images/mask.png);
+}
+
+@media screen and (min-width: 880px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  span {
+    font-size: 94px;
+  }
+}
+.whale-container {
+  position: relative;
+  margin: 0 20vw;
+  margin-top: 35vh;
+  margin-left: 375px;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 400px) {
+  .whale-container {
+    margin-top: 25vw;
+  }
+}
+.whale {
+  transform: scaleX(-1);
+  margin-left: calc(50vw - 150px);
+}
+.whale div {
+  position: absolute;
+  background: #d0d0d0;
+  z-index: 10;
+}
+.whale #whale1 {
+  width: 55px;
+  height: 63px;
+  top: 145px;
+  left: 72px;
+  -webkit-border-top-left-radius: 53px 63px;
+  -moz-border-radius-topleft: 53px 63px;
+  border-top-left-radius: 53px 63px;
+}
+.whale #whale2 {
+  width: 95px;
+  height: 63px;
+  top: 145px;
+  left: 127px;
+  -webkit-border-top-right-radius: 98px 70px;
+  -moz-border-radius-topright: 98px 70px;
+  border-top-right-radius: 98px 70px;
+}
+.whale .crop-area-1 {
+  overflow: hidden;
+  background: transparent !important;
+  width: 140px;
+  height: 31px;
+  top: 208px;
+  left: 72px;
+}
+.whale .crop-area-1 .cover-area {
+  width: 147px;
+  height: 51px;
+  top: -15px;
+  left: -6px;
+  -webkit-border-bottom-left-radius: 230px 95px;
+  -moz-border-radius-bottomleft: 230px 95px;
+  border-bottom-left-radius: 230px 95px;
+}
+.whale .mouth {
+  background: #fcfade !important;
+  z-index: 9 !important;
+  width: 135px;
+  height: 31px;
+  top: 208px;
+  left: 71px;
+  -webkit-border-bottom-left-radius: 250px 100px;
+  -moz-border-radius-bottomleft: 250px 100px;
+  border-bottom-left-radius: 250px 100px;
+  -webkit-border-bottom-right-radius: 150px 90px;
+  -moz-border-radius-bottomright: 150px 90px;
+  border-bottom-right-radius: 150px 90px;
+}
+.whale .crop-area-2 {
+  background: #fcfade !important;
+  overflow: hidden;
+  z-index: 8 !important;
+  width: 148px;
+  height: 64px;
+  top: 208px;
+  left: 74px;
+}
+.whale .crop-area-2 .cover-area {
+  z-index: 8 !important;
+  width: 347px;
+  height: 66px;
+  top: 0px;
+  left: 0;
+  -webkit-border-bottom-left-radius: 550px 170px;
+  -moz-border-radius-bottomleft: 550px 170px;
+  border-bottom-left-radius: 550px 170px;
+}
+.whale .eye {
+  background: #333 !important;
+  width: 20px;
+  height: 20px;
+  top: 204px;
+  left: 137px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+}
+.whale .eye-cover {
+  width: 30px;
+  height: 30px;
+  top: 208px;
+  left: 130px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+}
+.whale #whale6 {
+  width: 91px;
+  height: 52px;
+  top: 219px;
+  left: 200px;
+  -webkit-border-bottom-left-radius: 40px 10px;
+  -moz-border-radius-bottomleft: 40px 10px;
+  border-bottom-left-radius: 40px 10px;
+  -webkit-border-bottom-right-radius: 80px 80px;
+  -moz-border-radius-bottomright: 80px 80px;
+  border-bottom-right-radius: 80px 80px;
+}
+.whale #whale7 {
+  background: #fcfade !important;
+  width: 60px;
+  height: 30px;
+  top: 219px;
+  left: 222px;
+  -webkit-border-bottom-left-radius: 80px 80px;
+  -moz-border-radius-bottomleft: 80px 80px;
+  border-bottom-left-radius: 80px 80px;
+  -webkit-border-bottom-right-radius: 70px 70px;
+  -moz-border-radius-bottomright: 70px 70px;
+  border-bottom-right-radius: 70px 70px;
+  -webkit-border-top-right-radius: 15px 15px;
+  -moz-border-radius-topright: 15px 15px;
+  border-top-right-radius: 15px 15px;
+}
+.whale #whaletail1 {
+  width: 55px;
+  height: 33px;
+  top: 186px;
+  left: 237px;
+  -webkit-border-bottom-left-radius: 80px 80px;
+  -moz-border-radius-bottomleft: 80px 80px;
+  border-bottom-left-radius: 80px 80px;
+  -webkit-border-top-right-radius: 50px 50px;
+  -moz-border-radius-topright: 50px 50px;
+  border-top-right-radius: 50px 50px;
+}
+.whale #whaletail2 {
+  width: 33px;
+  height: 39px;
+  top: 147px;
+  left: 237px;
+  -webkit-border-top-left-radius: 60px 70px;
+  -moz-border-radius-topleft: 60px 70px;
+  border-top-left-radius: 60px 70px;
+}
+.whale #whaletail3 {
+  background: #fcfade !important;
+  width: 33px;
+  height: 42px;
+  top: 144px;
+  left: 252px;
+  -webkit-border-top-left-radius: 60px 70px;
+  -moz-border-radius-topleft: 60px 70px;
+  border-top-left-radius: 60px 70px;
+  -webkit-border-bottom-left-radius: 60px 70px;
+  -moz-border-radius-bottomleft: 60px 70px;
+  border-bottom-left-radius: 60px 70px;
+}
+.whale #whaletail4 {
+  width: 37px;
+  height: 32px;
+  top: 195px;
+  left: 289px;
+  -webkit-border-top-left-radius: 70px 70px;
+  -moz-border-radius-topleft: 70px 70px;
+  border-top-left-radius: 70px 70px;
+  -webkit-border-top-right-radius: 70px 70px;
+  -moz-border-radius-topright: 70px 70px;
+  border-top-right-radius: 70px 70px;
+}
+.whale #whaletail5 {
+  background: #fcfade !important;
+  z-index: 11 !important;
+  width: 32px;
+  height: 35px;
+  top: 169px;
+  left: 315px;
+  -webkit-border-bottom-left-radius: 70px 70px;
+  -moz-border-radius-bottomleft: 70px 70px;
+  border-bottom-left-radius: 70px 70px;
+  -webkit-border-bottom-right-radius: 70px 100px;
+  -moz-border-radius-bottomright: 70px 100px;
+  border-bottom-right-radius: 70px 100px;
+}
+.whale #whaletail6 {
+  width: 58px;
+  height: 33px;
+  top: 201px;
+  left: 294px;
+  -webkit-border-top-left-radius: 70px 70px;
+  -moz-border-radius-topleft: 70px 70px;
+  border-top-left-radius: 70px 70px;
+  -webkit-border-bottom-left-radius: 90px 70px;
+  -moz-border-radius-bottomleft: 90px 70px;
+  border-bottom-left-radius: 90px 70px;
+  -webkit-border-bottom-right-radius: 140px 140px;
+  -moz-border-radius-bottomright: 140px 140px;
+  border-bottom-right-radius: 140px 140px;
+}
+.whale #whaletail7 {
+  width: 18px;
+  height: 32px;
+  top: 169px;
+  left: 334px;
+  -webkit-border-top-right-radius: 60px 100px;
+  -moz-border-radius-topright: 60px 100px;
+  border-top-right-radius: 60px 100px;
+}
+.whale #whaletail8 {
+  background: #fcfade !important;
+  z-index: 11 !important;
+  width: 10px;
+  height: 10px;
+  top: 225px;
+  left: 289px;
+  -webkit-border-top-right-radius: 60px 60px;
+  -moz-border-radius-topright: 60px 60px;
+  border-top-right-radius: 60px 60px;
+  -webkit-border-top-left-radius: 40px 60px;
+  -moz-border-radius-topleft: 40px 60px;
+  border-top-left-radius: 40px 60px;
+}
